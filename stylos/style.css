@@ -1,0 +1,198 @@
+*{
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	font-family: 'Girassol', cursive;
+}
+.title{
+	width:100% ;
+	max-height: 1000;
+	margin:auto;
+	background-position: center;
+	color:#fff;
+	background: #3cc7c5;
+	padding: 7px;
+	font-family: 'Girassol', cursive;
+}
+.container1 a {
+	justify-content: center;
+	display: flex;
+	font-family: 'Girassol', cursive;
+
+}
+
+
+.container1, a.activo {
+	
+	font-family: 'Girassol', cursive;
+	color:#000;
+
+}  
+
+
+/*trabajo congrid*/
+
+.grid {
+	position:relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+
+.grid.imgenes-cargadas {
+	opacity: 1;
+}
+
+
+
+.grid .item {
+	position: absolute;
+	display: block; 
+	padding: 0;
+	margin: 10px;
+	width: calc(33.33333% - 20px);
+}
+
+
+.grid.item-contenido{
+	position:relative;
+
+}
+
+.grid .item img {
+	width: 100%;
+	cursor:pointer;
+	/*vertical-align: top;*/
+	
+	
+
+}
+
+
+
+/*overlay*/
+
+
+.overlay {
+	position:fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right:  0;
+	background: rgb(0, 0, 0, 0.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.overlay.activo {
+	display: flex;
+}
+
+
+.overlay .descripcion {
+	display: block;
+	background: #fff;
+	padding: 10px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 6px;
+	max-width: 50%;
+}
+
+.contenedor-img {
+	position: relative;
+
+}
+
+
+
+.contenedor-img button {
+	background: none;
+	font-size: 20px;
+	color:#fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+
+}
+
+/*redes sociales*/
+
+/*footer*/
+
+footer .redes-sociales{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 10px;
+	flex-wrap: wrap; 
+
+
+}
+
+footer .container-icon a {
+	display: block;
+	color:#fff;
+	margin:0px;
+	text-align: center;
+	border-radius: 100px;
+	width: 60px;
+	height: 60px;
+	background: #000;
+	transition: .3s ease all;
+
+}
+
+
+footer p {
+	margin:10px;
+	text-align: center;
+	font-family: 'Girassol', cursive;
+}
+
+
+footer .container-icon .instagram {background: #c13584;}
+footer .container-icon .facebook {background: #3b5998;}
+footer .container-icon .twitter {background: #3fd0f8}
+
+footer .container-icon a span{
+	font-size: 25px;
+	line-height: 60px;
+}
+
+
+
+footer .container-icon:hover a {
+	animation: icono .5s ease;
+}
+
+
+@keyframes icono {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,9, 360deg);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.grid .item{
+		width: calc(50% - 20px);
+	}
+
+	header .form-control {
+		width: 100%;
+	}
+}
